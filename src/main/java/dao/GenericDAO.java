@@ -23,7 +23,7 @@ public class GenericDAO {
 	public void atualizar(Object entidade){
 		EntityManager em = getEntityManager();
 		em.getTransaction().begin();
-		em.remove(entidade);
+		em.merge(entidade);
 		em.getTransaction().commit();
 	}
 	
